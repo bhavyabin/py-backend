@@ -1,0 +1,77 @@
+nohup: ignoring input
+[2025-06-26 14:01:55 +0000] [248441] [INFO] Starting gunicorn 23.0.0
+[2025-06-26 14:01:55 +0000] [248441] [INFO] Listening at: http://0.0.0.0:8000 (248441)
+[2025-06-26 14:01:55 +0000] [248441] [INFO] Using worker: sync
+[2025-06-26 14:01:55 +0000] [248442] [INFO] Booting worker with pid: 248442
+[2025-06-26 14:01:56 +0000] [248443] [INFO] Booting worker with pid: 248443
+[2025-06-26 14:01:56 +0000] [248444] [INFO] Booting worker with pid: 248444
+[2025-06-26 14:01:56 +0000] [248445] [INFO] Booting worker with pid: 248445
+[2025-06-26 14:05:04 +0000] [248441] [ERROR] Worker (pid:248442) was sent SIGHUP!
+[2025-06-26 14:05:04 +0000] [248441] [ERROR] Worker (pid:248445) was sent SIGHUP!
+[2025-06-26 14:05:04 +0000] [248441] [ERROR] Worker (pid:248443) was sent SIGHUP!
+[2025-06-26 14:05:04 +0000] [248441] [ERROR] Worker (pid:248444) was sent SIGHUP!
+[2025-06-26 14:05:04 +0000] [248599] [INFO] Booting worker with pid: 248599
+[2025-06-26 14:05:04 +0000] [248600] [INFO] Booting worker with pid: 248600
+[2025-06-26 14:05:04 +0000] [248441] [INFO] Handling signal: hup
+[2025-06-26 14:05:04 +0000] [248441] [INFO] Hang up: Master
+[2025-06-26 14:05:04 +0000] [248601] [INFO] Booting worker with pid: 248601
+[2025-06-26 14:05:04 +0000] [248602] [INFO] Booting worker with pid: 248602
+[2025-06-26 14:05:04 +0000] [248603] [INFO] Booting worker with pid: 248603
+[2025-06-26 14:05:04 +0000] [248604] [INFO] Booting worker with pid: 248604
+[2025-06-26 14:05:06 +0000] [248599] [INFO] Worker exiting (pid: 248599)
+[2025-06-26 14:05:06 +0000] [248600] [INFO] Worker exiting (pid: 248600)
+[2025-06-26 19:12:54 +0000] [248441] [CRITICAL] WORKER TIMEOUT (pid:248603)
+[2025-06-26 19:12:54 +0000] [248603] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/workers/sync.py", line 183, in handle_request
+    resp.write(item)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/wsgi.py", line 354, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/util.py", line 298, in write
+    sock.sendall(data)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-26 19:12:54 +0000] [248603] [INFO] Worker exiting (pid: 248603)
+https://city.imd.gov.in/citywx/city_weather_test_try_warnings.php?id=99926 
+
+9
+got the the data needed!🤞
+response 👍 
+
+[2025-06-26 19:12:54 +0000] [257712] [INFO] Booting worker with pid: 257712
+[2025-06-26 20:35:20 +0000] [248604] [WARNING] Invalid request from ip=3.131.215.38: Invalid HTTP request line: 'SSH-2.0-Go'
+[2025-06-27 00:49:19 +0000] [248441] [CRITICAL] WORKER TIMEOUT (pid:248601)
+[2025-06-27 00:49:19 +0000] [248601] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/ec2-user/py-backend/.venv/lib64/python3.9/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-06-27 00:49:19 +0000] [248601] [INFO] Worker exiting (pid: 248601)
+https://city.imd.gov.in/citywx/city_weather_test_try_warnings.php?id=10001 
+
+9
+got the the data needed!🤞
+response 👍 
+
+[2025-06-27 00:49:19 +0000] [267670] [INFO] Booting worker with pid: 267670
+[2025-06-27 01:19:13 +0000] [267670] [WARNING] Invalid request from ip=199.45.155.81: Invalid HTTP Version: (2, 0)
+[2025-06-27 01:19:21 +0000] [248602] [WARNING] Invalid request from ip=199.45.155.81: Invalid HTTP Version: (2, 0)
